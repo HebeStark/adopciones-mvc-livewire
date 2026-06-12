@@ -13,6 +13,11 @@ class AnimalFactory extends Factory
 {
     protected $model = Animal::class;
 
+    private static array $fotosPorTipo = [
+        'perro' => ['animales/rocky.jpg', 'animales/kyla.jpg', 'animales/thor.jpg'],
+        'gato'  => ['animales/luna.jpg',  'animales/michu.jpg', 'animales/nala.jpg'],
+    ];
+
     public function definition(): array
     {
         $tipo = $this->faker->randomElement(AnimalType::values());
@@ -22,7 +27,7 @@ class AnimalFactory extends Factory
             'tipo'   => $tipo,
             'edad'   => $this->faker->numberBetween(1, 12),
             'estado' => 'disponible',
-            'foto'   => null,
+            'foto'   => $this->faker->randomElement(self::$fotosPorTipo[$tipo]),
         ];
     }
 
