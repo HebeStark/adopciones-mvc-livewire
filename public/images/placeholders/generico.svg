@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" fill="#f3f4f6"/>
+  <!-- paw print -->
+  <circle cx="100" cy="115" r="28" fill="#d1d5db"/>
+  <circle cx="72" cy="82" r="14" fill="#d1d5db"/>
+  <circle cx="100" cy="75" r="14" fill="#d1d5db"/>
+  <circle cx="128" cy="82" r="14" fill="#d1d5db"/>
+  <!-- toe beans -->
+  <circle cx="86" cy="112" r="7" fill="#9ca3af"/>
+  <circle cx="100" cy="107" r="7" fill="#9ca3af"/>
+  <circle cx="114" cy="112" r="7" fill="#9ca3af"/>
+  <circle cx="100" cy="124" r="8" fill="#9ca3af"/>
+</svg>

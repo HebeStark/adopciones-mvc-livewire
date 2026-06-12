@@ -18,5 +18,9 @@ class Animal extends Model
         'estado',
         'foto',
     ];
- 
+
+    public function solicitudes()
+    {
+        return $this->hasMany(SolicitudAdopcion::class);
+    }
 }

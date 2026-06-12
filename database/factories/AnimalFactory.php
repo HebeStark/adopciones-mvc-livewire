@@ -1,6 +1,8 @@
 <?php
 
 namespace Database\Factories;
+
+use App\Enums\AnimalType;
 use App\Models\Animal;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -8,37 +10,40 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Animal>
  */
 class AnimalFactory extends Factory
-{   
+{
     protected $model = Animal::class;
 
     public function definition(): array
     {
-         $imagenes = [
-        'images/animales/luna.jpg',
-        'images/animales/max.jpg',
-        'images/animales/nala.jpg',
-        'images/animales/rocky.jpg',
-        'images/animales/milo.jpg',
-        'images/animales/bella.jpg',
-    ];
+        $tipo = $this->faker->randomElement(AnimalType::values());
+
         return [
-        'nombre' => $this->faker->firstName(),
-        'tipo' => $this->faker->randomElement(['perro', 'gato']),
-        'edad' => $this->faker->numberBetween(1, 15),
-        'estado' => 'disponible',
-        'foto' => $this->faker->randomElement($imagenes),
-    ];
-    
+            'nombre' => $this->faker->firstName(),
+            'tipo'   => $tipo,
+            'edad'   => $this->faker->numberBetween(1, 12),
+            'estado' => 'disponible',
+            'foto'   => null,
+        ];
     }
 
     public function cachorro(): static
     {
-        return $this->state(fn (array $attributes) => [
-            'edad' => $this->faker->numberBetween(1, 2), 
-        ]);         
-   
+        return $this->state(fn (array $_) => [
+            'edad' => $this->faker->numberBetween(0, 1),
+        ]);
     }
 
-            
-  
+    public function perro(): static
+    {
+        return $this->state(fn (array $_) => [
+            'tipo' => AnimalType::Perro->value,
+        ]);
+    }
+
+    public function gato(): static
+    {
+        return $this->state(fn (array $_) => [
+            'tipo' => AnimalType::Gato->value,
+        ]);
+    }
 }

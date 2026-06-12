@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" fill="#ede9fe"/>
+  <!-- body -->
+  <ellipse cx="100" cy="130" rx="45" ry="35" fill="#a78bfa"/>
+  <!-- head -->
+  <circle cx="100" cy="82" r="30" fill="#a78bfa"/>
+  <!-- left ear -->
+  <ellipse cx="76" cy="60" rx="14" ry="20" rx="14" fill="#7c3aed" transform="rotate(-15 76 60)"/>
+  <!-- right ear -->
+  <ellipse cx="124" cy="60" rx="14" ry="20" fill="#7c3aed" transform="rotate(15 124 60)"/>
+  <!-- eyes -->
+  <circle cx="91" cy="78" r="5" fill="#1e1b4b"/>
+  <circle cx="109" cy="78" r="5" fill="#1e1b4b"/>
+  <circle cx="93" cy="76" r="2" fill="white"/>
+  <circle cx="111" cy="76" r="2" fill="white"/>
+  <!-- nose -->
+  <ellipse cx="100" cy="92" rx="7" ry="5" fill="#1e1b4b"/>
+  <!-- mouth -->
+  <path d="M93 96 Q100 104 107 96" stroke="#1e1b4b" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- tail -->
+  <path d="M145 125 Q170 100 160 80" stroke="#a78bfa" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <!-- legs -->
+  <rect x="70" y="155" width="16" height="28" rx="8" fill="#7c3aed"/>
+  <rect x="90" y="155" width="16" height="28" rx="8" fill="#7c3aed"/>
+  <rect x="108" y="155" width="16" height="28" rx="8" fill="#7c3aed"/>
+</svg>
